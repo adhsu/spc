@@ -1,0 +1,117 @@
+@import "../libs/reset.css";
+@import "../libs/flexboxgrid.css";
+@import vars
+@import utilities
+@import fonts
+
+*
+  -webkit-font-smoothing antialiased
+
+body
+  background-color $black
+  font-family 'Atlas Grotesk', sans-serif
+  font-size $font-size-large
+  line-height $line-height-large
+  color $white
+
+
+ul, ol
+  font-family 'Atlas Grotesk', sans-serif
+  list-style none
+  list-style-type none
+  margin 0
+  padding 0
+
+p
+  color $white
+  font-weight 300
+  margin 0
+  margin-bottom 16px
+  &:last-child
+    margin-bottom 0
+  
+a
+  color $brandGold
+  text-decoration none
+  
+a:hover
+  color $brandHighlight2
+  text-decoration none
+  
+h1
+  font-weight 300
+  font-size 30px
+  line-height 36px
+  margin 0
+  margin-bottom 12px
+  margin-top 32px
+
+h2
+  font-weight 300
+  font-size 21px
+  line-height 28px
+  margin 0
+  margin-bottom 11px
+  margin-top 21px
+
+
+.col-content
+  padding-top 9rem
+  padding-bottom 5em
+
+.sidebar
+  display flex
+  align-items center
+  position fixed
+  top 0
+  left 0
+  bottom 0
+  padding 0 2em
+
+.spc-logo
+  width 168px
+  display block
+  margin 0 auto
+    
+nav
+  border-top 1px solid $brandGold
+  padding-top 1rem
+  margin-top 3rem
+  
+  a
+    display block
+    font-size 1rem
+    line-height 2rem
+
+// flexboxgrid addons
+
+.container  
+  width 100%
+  max-width 1200px
+  padding-left 1.5rem
+  padding-right 1.5rem
+
+.container-small
+  max-width 1000px
+
+.container-fluid
+  width 100%
+
+// xs
+@media only screen and (max-width:$sm-viewport)
+  .u-hidden-xs
+    display none !important
+  
+  .sidebar
+    position static
+    padding 2em 2em
+  .col-content
+    padding 0 2em 2em 2em
+    
+// sm
+@media only screen and (min-width:$sm-viewport)
+  .u-block-sm
+    display block !important
+  
+  .u-hidden-sm
+    display none !important

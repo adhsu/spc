@@ -1,0 +1,46 @@
+@import vars
+
+nav
+  position fixed
+  z-index 1
+  top 0
+  left 0
+  width 100%
+  height 70px
+  background-color rgba($white, 50%)
+
+.nav-logo
+  line-height 70px
+  
+.nav-logo-image
+  display inline-block
+  vertical-align middle
+  width 34px
+  height 34px
+  margin-right 10px
+  
+.nav-logo-text
+  display inline-block
+  vertical-align middle
+  font-size 20px
+  font-weight 500 // medium
+  color $brandDark
+
+.nav-link
+  color $brandDark
+  font-size 14px
+  font-weight 400
+  margin-left 1.5rem
+  
+.nav-link-strong
+  font-weight 500
+
+.Hero-inverted
+  nav
+    background-color $brandRed
+    
+  .nav-logo-image
+    filter brightness(0) invert(1) // make white
+  .nav-logo-text
+  .nav-link
+    color $white
