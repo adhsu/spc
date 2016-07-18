@@ -1,0 +1,43 @@
+doctype html
+html
+
+  head
+    title South Park Commons
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    
+    link(rel="stylesheet", type="text/css", href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
+    link(rel="stylesheet", type="text/css", href="/css/main.css")
+    script(src='/js/main.js')
+
+
+  body
+    .container-fluid
+    
+      .row.middle-xs
+        
+        
+        .col-xs-12.col-sm-3.col-md-3
+
+          .mobile-nav
+            a(href='#').mobile-nav-icon
+              i.icon.ion-navicon
+
+          .sidebar
+            .sidebar-content
+              
+              a(href='/')
+                img.spc-logo(src='/img/spc-logo.png')
+              
+              block nav
+                -var active='nav-home'
+              
+              nav.u-hidden-xs(class="#{active}")
+                a.nav-location(href='/location') Location
+                a.nav-members(href='/members') Members
+                a.nav-events(href='/events') Events &amp; Activities
+                a.nav-air(href='/air') A.I.R.
+        
+        .col-xs-12.col-sm-9.col-md-6.col-content
+          block content
+
+        .u-hidden-xs.u-hidden-sm.col-md-3

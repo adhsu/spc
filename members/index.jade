@@ -1,0 +1,16 @@
+extends ../layout.jade
+
+block nav
+	-var active = 'nav-members'
+
+block content
+	p We're an invite-only community working out of a sunlit building in the heart of South Park, San Francisco. Founded in the fall of 2015, we bring together creatives and entrepreneurs working on early stage ideas.
+
+	.members
+		each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+			.member
+				.member-inner
+					img(src='/img/member-ruchi.jpg')
+
+
+	

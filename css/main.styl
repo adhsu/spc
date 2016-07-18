@@ -10,10 +10,9 @@
 body
   background-color $black
   font-family 'Atlas Grotesk', sans-serif
-  font-size $font-size-large
-  line-height $line-height-large
+  font-size 2rem
+  line-height 3rem
   color $white
-
 
 ul, ol
   font-family 'Atlas Grotesk', sans-serif
@@ -23,10 +22,8 @@ ul, ol
   padding 0
 
 p
-  color $white
-  font-weight 300
   margin 0
-  margin-bottom 16px
+  margin-bottom 3rem
   &:last-child
     margin-bottom 0
   
@@ -34,42 +31,33 @@ a
   color $brandGold
   text-decoration none
   
-a:hover
-  color $brandHighlight2
-  text-decoration none
-  
-h1
-  font-weight 300
-  font-size 30px
-  line-height 36px
-  margin 0
-  margin-bottom 12px
-  margin-top 32px
+  &:hover
+    color $brandGold2
+    text-decoration none
 
-h2
-  font-weight 300
-  font-size 21px
-  line-height 28px
-  margin 0
-  margin-bottom 11px
-  margin-top 21px
 
 
 .col-content
   padding-top 9rem
-  padding-bottom 5em
+  padding-bottom 9rem
 
 .sidebar
   display flex
   align-items center
+  justify-content space-around
   position fixed
   top 0
-  left 0
+  left 2rem
   bottom 0
-  padding 0 2em
+  width calc(25% - 2.5rem)
 
+.sidebar-content
+  max-width 220px
+  width 100%
+  text-align center
+  
 .spc-logo
-  width 168px
+  width 130px
   display block
   margin 0 auto
     
@@ -83,6 +71,72 @@ nav
     font-size 1rem
     line-height 2rem
 
+nav.nav-location a.nav-location
+nav.nav-members a.nav-members
+nav.nav-events a.nav-events
+nav.nav-air a.nav-air
+  color $brandGold2
+
+.mobile-nav
+  position absolute
+  top 0.5rem
+  right 1rem
+  width 2rem
+  height 2rem
+  text-align center
+  line-height 2rem
+  font-size 3rem
+  .mobile-nav-icon
+    color rgba($white, 50%)
+
+.events-list
+  font-size 1.5rem
+  line-height 2.25rem
+  color $brandRegular
+  li
+    margin-bottom 2.25rem
+    &:last-child
+      margin-bottom 0
+      
+  .highlight
+    color $brandHighlight
+    font-weight 600
+
+.air-video
+  position relative
+  max-width 640px
+  
+
+  .air-video-ratio // hack to maintain iframe aspect ratio
+    display block
+    width 100%
+    height auto
+
+  iframe
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+
+.members
+  display flex
+  justify-content space-between
+  align-items flex-start
+  flex-wrap wrap
+  
+.member
+  padding 0.5rem
+  padding-bottom 2rem
+
+.member-inner
+  width 144px
+  height 144px
+  border-radius 72px
+  overflow hidden
+  img
+    width 100%
+
 // flexboxgrid addons
 
 .container  
@@ -90,9 +144,6 @@ nav
   max-width 1200px
   padding-left 1.5rem
   padding-right 1.5rem
-
-.container-small
-  max-width 1000px
 
 .container-fluid
   width 100%
@@ -102,11 +153,27 @@ nav
   .u-hidden-xs
     display none !important
   
+  body
+    font-size 1.25rem
+    line-height 1.75rem
+  
+  .spc-logo
+    width 120px
+      
+  .col-content
+    padding-top 2rem
+    padding-bottom 2rem
+    
   .sidebar
     position static
-    padding 2em 2em
-  .col-content
-    padding 0 2em 2em 2em
+    width 100%
+    padding-top 4rem
+    padding-bottom 2rem
+  
+  .member-inner
+    width 130px
+    height 130px
+    
     
 // sm
 @media only screen and (min-width:$sm-viewport)
@@ -115,3 +182,4 @@ nav
   
   .u-hidden-sm
     display none !important
+
